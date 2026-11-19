@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="300" viewBox="0 0 1200 300" role="img" aria-labelledby="title desc">
+<title id="title">ISEM – Institut für Smarte Entwicklung und Maschinenelemente, Technische Universität Hamburg</title>
+<desc id="desc">Banner mit dem Institutsnamen, kämmenden Zahnrädern als Symbol für Maschinenelemente und einem Netz aus Knoten als Symbol für Software.</desc>
+<style>
+.ink{fill:#0b2545}
+.muted{fill:#4a5b70}
+.accent{fill:#00879a}
+text{font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', Helvetica, Arial, sans-serif}
+.gear{fill:#00879a;fill-opacity:0.08;stroke:#00879a;stroke-opacity:.75;stroke-width:1.5;fill-rule:evenodd;transform-box:fill-box;transform-origin:center}
+.gear.b{stroke:#2b5d9b;fill:#2b5d9b}
+.cl{stroke:#4a5b70;stroke-opacity:.45;stroke-width:1;stroke-dasharray:14 3 2 3;fill:none}
+.pitch{stroke:#00879a;stroke-opacity:.35;stroke-width:1;stroke-dasharray:2 4;fill:none}
+.edge{stroke:#2b5d9b;stroke-opacity:0.55;stroke-width:1.4;fill:none;stroke-dasharray:4 10;animation:flow 3.5s linear infinite}
+.link{stroke:#00879a;stroke-opacity:.45;stroke-width:1.2;fill:none;stroke-dasharray:2 6;animation:flow 5s linear infinite}
+.node{fill:#f7fafc;stroke:#2b5d9b;stroke-width:2;animation:pulse 4s ease-in-out infinite alternate}
+.dim{stroke:#00879a;stroke-width:1.5;fill:none}
+.dim-draw{stroke-dasharray:480;stroke-dashoffset:480;animation:draw 1.8s ease-out .3s forwards}
+.sheen{animation:sheen 60s linear infinite}
+.cw{animation:spin 64s linear infinite}
+.ccw-b{animation:spin 40s linear infinite reverse}
+.ccw-c{animation:spin 32s linear infinite reverse}
+@keyframes spin{to{transform:rotate(360deg)}}
+@keyframes flow{to{stroke-dashoffset:-28}}
+@keyframes pulse{from{stroke-opacity:.45}to{stroke-opacity:1}}
+@keyframes draw{to{stroke-dashoffset:0}}
+@keyframes sheen{to{transform:translateX(2400px)}}
+@media (prefers-reduced-motion: reduce){
+  .cw,.ccw-b,.ccw-c,.edge,.link,.node,.sheen{animation:none}
+  .dim-draw{animation:none;stroke-dashoffset:0}
+}
+</style>
+<defs>
+<linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f7fafc"/><stop offset="1" stop-color="#e6eff6"/></linearGradient>
+<linearGradient id="sheenGrad" gradientUnits="userSpaceOnUse" x1="0" y1="0" x2="1200" y2="0" spreadMethod="reflect"><stop offset="0" stop-color="#00879a" stop-opacity="0"/><stop offset="0.55" stop-color="#00879a" stop-opacity="0.16"/><stop offset="0.8" stop-color="#2b5d9b" stop-opacity="0.08"/><stop offset="1" stop-color="#2b5d9b" stop-opacity="0"/></linearGradient>
+<pattern id="gridMinor" width="20" height="20" patternUnits="userSpaceOnUse"><path d="M20 0H0V20" fill="none" stroke="#0b2545" stroke-opacity="0.07" stroke-width="0.6"/></pattern>
+<pattern id="gridMajor" width="100" height="100" patternUnits="userSpaceOnUse"><rect width="100" height="100" fill="url(#gridMinor)"/><path d="M100 0H0V100" fill="none" stroke="#0b2545" stroke-opacity="0.13" stroke-width="0.8"/></pattern>
+<linearGradient id="fadeGrad" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#fff" stop-opacity="0.25"/><stop offset="0.55" stop-color="#fff" stop-opacity="0.6"/><stop offset="1" stop-color="#fff" stop-opacity="1"/></linearGradient>
+<mask id="fade"><rect width="1200" height="300" fill="url(#fadeGrad)"/></mask>
+<clipPath id="frame"><rect width="1200" height="300" rx="14"/></clipPath>
+</defs>
+<g clip-path="url(#frame)">
+<rect width="1200" height="300" fill="url(#bg)"/>
+<rect class="sheen" x="-2400" y="0" width="3600" height="300" fill="url(#sheenGrad)"/>
+<rect width="1200" height="300" fill="url(#gridMajor)" mask="url(#fade)"/>
+<path class="cl" d="M854 158H1026M940 72V244"/>
+<circle class="pitch" cx="940" cy="158" r="64"/>
+<path class="cl" d="M959.95 93.97H1083.95M1021.95 31.97V155.97"/>
+<circle class="pitch" cx="1021.95" cy="93.97" r="40"/>
+<path class="cl" d="M801.24 203.07H909.24M855.24 149.07V257.07"/>
+<circle class="pitch" cx="855.24" cy="203.07" r="32"/>
+<path class="link" d="M1021.95 93.97L1158 96"/>
+<path class="link" d="M940 158L1068 214"/>
+<path class="edge" d="M1068 214L1128 168"/>
+<path class="edge" d="M1128 168L1170 232"/>
+<path class="edge" d="M1170 232L1110 268"/>
+<path class="edge" d="M1110 268L1068 214"/>
+<path class="edge" d="M1128 168L1158 96"/>
+<path class="edge" d="M1158 96L1092 44"/>
+<path class="edge" d="M1158 96L1176 30"/>
+<path class="edge" d="M1092 44L1176 30"/>
+<path class="edge" d="M1068 214L1044 274"/>
+<path class="edge" d="M1110 268L1044 274"/>
+<path class="edge" d="M1128 168L1110 268"/>
+<g transform="translate(940 158) rotate(7)"><path class="gear cw" d="M53.7 -5.71L71.89 -3.96A72 72 0 0 1 71.89 3.96L53.7 5.71A54 54 0 0 1 51.8 15.27L51.8 15.27L67.93 23.86A72 72 0 0 1 64.9 31.17L47.42 25.83A54 54 0 0 1 42.01 33.93L42.01 33.93L53.63 48.04A72 72 0 0 1 48.04 53.63L33.93 42.01A54 54 0 0 1 25.83 47.42L25.83 47.42L31.17 64.9A72 72 0 0 1 23.86 67.93L15.27 51.8A54 54 0 0 1 5.71 53.7L5.71 53.7L3.96 71.89A72 72 0 0 1 -3.96 71.89L-5.71 53.7A54 54 0 0 1 -15.27 51.8L-15.27 51.8L-23.86 67.93A72 72 0 0 1 -31.17 64.9L-25.83 47.42A54 54 0 0 1 -33.93 42.01L-33.93 42.01L-48.04 53.63A72 72 0 0 1 -53.63 48.04L-42.01 33.93A54 54 0 0 1 -47.42 25.83L-47.42 25.83L-64.9 31.17A72 72 0 0 1 -67.93 23.86L-51.8 15.27A54 54 0 0 1 -53.7 5.71L-53.7 5.71L-71.89 3.96A72 72 0 0 1 -71.89 -3.96L-53.7 -5.71A54 54 0 0 1 -51.8 -15.27L-51.8 -15.27L-67.93 -23.86A72 72 0 0 1 -64.9 -31.17L-47.42 -25.83A54 54 0 0 1 -42.01 -33.93L-42.01 -33.93L-53.63 -48.04A72 72 0 0 1 -48.04 -53.63L-33.93 -42.01A54 54 0 0 1 -25.83 -47.42L-25.83 -47.42L-31.17 -64.9A72 72 0 0 1 -23.86 -67.93L-15.27 -51.8A54 54 0 0 1 -5.71 -53.7L-5.71 -53.7L-3.96 -71.89A72 72 0 0 1 3.96 -71.89L5.71 -53.7A54 54 0 0 1 15.27 -51.8L15.27 -51.8L23.86 -67.93A72 72 0 0 1 31.17 -64.9L25.83 -47.42A54 54 0 0 1 33.93 -42.01L33.93 -42.01L48.04 -53.63A72 72 0 0 1 53.63 -48.04L42.01 -33.93A54 54 0 0 1 47.42 -25.83L47.42 -25.83L64.9 -31.17A72 72 0 0 1 67.93 -23.86L51.8 -15.27A54 54 0 0 1 53.7 -5.71ZM12 0A12 12 0 1 0 -12 0A12 12 0 1 0 12 0ZM40.34 16.5A11.76 11.76 0 1 0 16.82 16.5A11.76 11.76 0 1 0 40.34 16.5ZM11.76 33A11.76 11.76 0 1 0 -11.76 33A11.76 11.76 0 1 0 11.76 33ZM-16.82 16.5A11.76 11.76 0 1 0 -40.34 16.5A11.76 11.76 0 1 0 -16.82 16.5ZM-16.82 -16.5A11.76 11.76 0 1 0 -40.34 -16.5A11.76 11.76 0 1 0 -16.82 -16.5ZM11.76 -33A11.76 11.76 0 1 0 -11.76 -33A11.76 11.76 0 1 0 11.76 -33ZM40.34 -16.5A11.76 11.76 0 1 0 16.82 -16.5A11.76 11.76 0 1 0 40.34 -16.5Z"/></g>
+<g transform="translate(1021.95 93.97) rotate(16)"><path class="gear b ccw-b" d="M29.57 -5.07L47.81 -4.22A48 48 0 0 1 47.81 4.22L29.57 5.07A30 30 0 0 1 26.9 13.28L26.9 13.28L41.16 24.69A48 48 0 0 1 36.2 31.52L20.94 21.48A30 30 0 0 1 13.95 26.56L13.95 26.56L18.79 44.17A48 48 0 0 1 10.76 46.78L4.32 29.69A30 30 0 0 1 -4.32 29.69L-4.32 29.69L-10.76 46.78A48 48 0 0 1 -18.79 44.17L-13.95 26.56A30 30 0 0 1 -20.94 21.48L-20.94 21.48L-36.2 31.52A48 48 0 0 1 -41.16 24.69L-26.9 13.28A30 30 0 0 1 -29.57 5.07L-29.57 5.07L-47.81 4.22A48 48 0 0 1 -47.81 -4.22L-29.57 -5.07A30 30 0 0 1 -26.9 -13.28L-26.9 -13.28L-41.16 -24.69A48 48 0 0 1 -36.2 -31.52L-20.94 -21.48A30 30 0 0 1 -13.95 -26.56L-13.95 -26.56L-18.79 -44.17A48 48 0 0 1 -10.76 -46.78L-4.32 -29.69A30 30 0 0 1 4.32 -29.69L4.32 -29.69L10.76 -46.78A48 48 0 0 1 18.79 -44.17L13.95 -26.56A30 30 0 0 1 20.94 -21.48L20.94 -21.48L36.2 -31.52A48 48 0 0 1 41.16 -24.69L26.9 -13.28A30 30 0 0 1 29.57 -5.07ZM8 0A8 8 0 1 0 -8 0A8 8 0 1 0 8 0Z"/></g>
+<g transform="translate(855.24 203.07) rotate(14.5)"><path class="gear ccw-c" d="M21.51 -4.63L39.76 -4.39A40 40 0 0 1 39.76 4.39L21.51 4.63A22 22 0 0 1 18.48 11.93L18.48 11.93L31.22 25.01A40 40 0 0 1 25.01 31.22L11.93 18.48A22 22 0 0 1 4.63 21.51L4.63 21.51L4.39 39.76A40 40 0 0 1 -4.39 39.76L-4.63 21.51A22 22 0 0 1 -11.93 18.48L-11.93 18.48L-25.01 31.22A40 40 0 0 1 -31.22 25.01L-18.48 11.93A22 22 0 0 1 -21.51 4.63L-21.51 4.63L-39.76 4.39A40 40 0 0 1 -39.76 -4.39L-21.51 -4.63A22 22 0 0 1 -18.48 -11.93L-18.48 -11.93L-31.22 -25.01A40 40 0 0 1 -25.01 -31.22L-11.93 -18.48A22 22 0 0 1 -4.63 -21.51L-4.63 -21.51L-4.39 -39.76A40 40 0 0 1 4.39 -39.76L4.63 -21.51A22 22 0 0 1 11.93 -18.48L11.93 -18.48L25.01 -31.22A40 40 0 0 1 31.22 -25.01L18.48 -11.93A22 22 0 0 1 21.51 -4.63ZM7 0A7 7 0 1 0 -7 0A7 7 0 1 0 7 0Z"/></g>
+<circle class="node" cx="1068" cy="214" r="5" style="animation-delay:-0.0s"/>
+<circle class="node" cx="1128" cy="168" r="5" style="animation-delay:-0.7s"/>
+<circle class="node" cx="1170" cy="232" r="5" style="animation-delay:-1.4s"/>
+<circle class="node" cx="1110" cy="268" r="5" style="animation-delay:-2.1s"/>
+<circle class="node" cx="1158" cy="96" r="5" style="animation-delay:-2.8s"/>
+<circle class="node" cx="1092" cy="44" r="5" style="animation-delay:-3.5s"/>
+<circle class="node" cx="1176" cy="30" r="5" style="animation-delay:-4.2s"/>
+<circle class="node" cx="1044" cy="274" r="5" style="animation-delay:-4.9s"/>
+<text class="ink" x="64" y="122" font-size="68" font-weight="800" letter-spacing="6">ISEM</text>
+<text class="ink" x="64" y="168" font-size="26" font-weight="600">Institut für Smarte Entwicklung und Maschinenelemente</text>
+<text class="muted" x="64" y="202" font-size="19">Technische Universität Hamburg</text>
+<path class="dim" d="M64 228V244M534 228V244"/>
+<path class="dim dim-draw" d="M64 236H534"/>
+<path class="dim" d="M64 236l10 -4M64 236l10 4M534 236l-10 -4M534 236l-10 4"/>
+<text class="accent" x="64" y="268" font-size="15" font-weight="600" letter-spacing="2.5">ENTWICKLUNG · MASCHINENELEMENTE · SOFTWARE</text>
+</g>
+</svg>
